@@ -22,5 +22,41 @@
     "sku" : "Z4",
     "quantity" : 100,
     "orders" : 100
+  },
+  {
+    "name" : "Автомобиль класса B",
+    "sku" : "Z5",
+    "quantity" : 2,
+    "orders" : 1
+  },
+  {
+    "name" : "Пакет семечек",
+    "sku" : "Z6",
+    "quantity" : 10,
+    "orders" : 101
+  },
+  {
+    "name" : "Шнурки от калош",
+    "sku" : "Z8",
+    "quantity" : 2,
+    "orders" : 1
+  },
+  {
+    "name" : "Потерянное время",
+    "sku" : "Z9",
+    "quantity" : 99,
+    "orders" : 0
+  },
+  {
+    "name" : "Телевизор 'Чайка'",
+    "sku" : "Z10",
+    "quantity" : 2,
+    "orders" : 1
+  },
+  {
+    "name" : "Голубь",
+    "sku" : "Z11",
+    "quantity" : 2,
+    "orders" : 1
   }
 ]

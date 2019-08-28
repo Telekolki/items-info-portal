@@ -1,5 +1,12 @@
-<li *ngFor="let item of itemsList">
-  {{item.name}} {{item.quantity}}
-</li>
+<div class="container-fluid">
+    <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let item of itemsList">
+              <span class="badge">{{item.quantity}}</span>
+            {{item.name}} 
+          </li>
+        </ul>
+      </div>
+</div>
 
 <app-item></app-item>

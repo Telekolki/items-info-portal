@@ -9,14 +9,6 @@ declare var require: any
 })
 export class ItemsListComponent implements OnInit {
 
-  // itemsList: Item[] = [
-  //   new Item('Lopata', 'Z1', 1, 1),
-  //   new Item('Кружок от унитаза', 'Z2', 0, 1),
-  //   new Item('Пенопластовое изделие', 'Z3', 1, 0),
-  //   new Item('Карандаш', 'Z4', 100, 100),
-  // ];
-
-
   jsonString = JSON.stringify(require('src/app/items-list/items-data.json'));
   jsonData: Item[] = JSON.parse(this.jsonString);
   itemsList: Item[] = [];

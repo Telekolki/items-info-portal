@@ -1,0 +1,26 @@
+[
+  {
+    "name" : "Лопата",
+    "sku" : "Z1",
+    "quantity" : 1,
+    "orders" : 1
+  },
+  {
+    "name" : "Кружок от унитаза",
+    "sku" : "Z2",
+    "quantity" : 0,
+    "orders" : 1
+  },
+  {
+    "name" : "Пенопластовое изделие",
+    "sku" : "Z3",
+    "quantity" : 1,
+    "orders" : 0
+  },
+  {
+    "name" : "Карандаш",
+    "sku" : "Z4",
+    "quantity" : 100,
+    "orders" : 100
+  }
+]

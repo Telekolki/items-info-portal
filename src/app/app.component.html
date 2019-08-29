@@ -4,17 +4,27 @@
             <nav class="navbar navbar-default">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                      <a
+                        class="nav-link"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}"
+                        routerLink="">
+                        Home
+                      </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Items list</a>
+                      <a
+                        class="nav-link"
+                        routerLinkActive="active"
+                        routerLink="/items">
+                        Items list
+                      </a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="col-lg-10">
-            <app-home></app-home>
-            <app-items-list></app-items-list>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

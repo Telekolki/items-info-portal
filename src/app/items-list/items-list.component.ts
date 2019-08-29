@@ -9,14 +9,14 @@ declare var require: any
 })
 export class ItemsListComponent implements OnInit {
 
-  jsonString = JSON.stringify(require('src/app/items-list/items-data.json'));
-  jsonData: Item[] = JSON.parse(this.jsonString);
-  itemsList: Item[] = [];
+  jsonDataString = JSON.stringify(require('src/app/items-list/items-data.json'));
+  jsonDataParsed: Item[] = JSON.parse(this.jsonDataString);
+  itemsArray: Item[] = [];
 
 
   convertJsonToArray() {
-    for (const item of this.jsonData) {
-      this.itemsList.push(new Item(item.name, item.sku, item.quantity, item.orders));
+    for (const item of this.jsonDataParsed) {
+      this.itemsArray.push(new Item(item.name, item.sku, item.quantity, item.orders));
     }
   }
 
@@ -24,10 +24,10 @@ export class ItemsListComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.jsonString);
-    console.log(this.jsonData);
+    console.log(this.jsonDataString);
+    console.log(this.jsonDataParsed);
     this.convertJsonToArray();
-    console.log(this.itemsList);
+    console.log(this.itemsArray);
   }
 
 }

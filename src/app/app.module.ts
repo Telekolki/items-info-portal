@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +8,12 @@ import { ItemsListComponent } from './items-list/items-list.component';
 import { ItemComponent } from './items-list/item/item.component';
 import { TopItemsComponent } from './home/top-items/top-items.component';
 import { OutOfStockItemsComponent } from './home/out-of-stock-items/out-of-stock-items.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'items', component: ItemsListComponent}
+];
 
 @NgModule({
   declarations: [
@@ -20,7 +26,8 @@ import { OutOfStockItemsComponent } from './home/out-of-stock-items/out-of-stock
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

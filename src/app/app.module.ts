@@ -9,6 +9,7 @@ import { ItemComponent } from './items-list/item/item.component';
 import { TopItemsComponent } from './home/top-items/top-items.component';
 import { OutOfStockItemsComponent } from './home/out-of-stock-items/out-of-stock-items.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ItemService } from './items-list/item/item.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -29,7 +30,11 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private itemService: ItemService) {
+    this.itemService.initItemsArrayFromJson();
+  }
+}

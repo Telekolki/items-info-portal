@@ -1,3 +1,10 @@
-<p>
-  out-of-stock-items works!
-</p>
+<div class="card">
+    <h4>Out of stock items</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of itemsOutOfStock">
+            <span class="badge">{{item.quantity}}</span>
+          {{item.name}}</li>
+      </ul>
+</div>
+
+

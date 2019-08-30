@@ -1,19 +1,13 @@
-import { Item } from './item.model';
+declare var require: any;
+//https://stackoverflow.com/questions/31173738/typescript-getting-error-ts2304-cannot-find-name-require
 
 export class ItemService {
-  require: any;
-  jsonDataString = JSON.stringify(require('src/app/items-list/item/item-data.json'));
-  jsonDataParsed: Item[] = JSON.parse(this.jsonDataString);
-  itemsArray: Item[] = [];
+  jsonDataString: string = JSON.stringify(require('src/app/items-list/item/item-data.json'));
+  jsonDataParsed: any[] = JSON.parse(this.jsonDataString);
 
-  initItemsArrayFromJson() {
-    for (const item of this.jsonDataParsed) {
-      this.itemsArray.push(new Item(item.name, item.sku, Number(item.quantity), Number(item.orders)));
-    }
-    // console.log(this.jsonDataString);
-    // console.log(this.jsonDataParsed);
-    // console.log(this.itemsArray);
+  logItems() {
+    console.log(this.jsonDataString);
+    console.log(this.jsonDataParsed);
     console.log('Items array initialized');
-
   }
 }

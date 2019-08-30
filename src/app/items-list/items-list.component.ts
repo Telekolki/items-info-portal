@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from './item/item.service';
-import { Item } from './item/item.model';
 
 @Component({
   selector: 'app-items-list',
@@ -8,7 +7,7 @@ import { Item } from './item/item.model';
   styleUrls: ['./items-list.component.css']
 })
 export class ItemsListComponent implements OnInit {
-  itemsArray: Item[] = this.itemService.itemsArray;
+  itemsArray = this.itemService.jsonDataParsed;
 
   constructor(private itemService: ItemService) {}
 

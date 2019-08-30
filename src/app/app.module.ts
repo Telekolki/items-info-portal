@@ -35,6 +35,6 @@ const appRoutes: Routes = [
 })
 export class AppModule {
   constructor(private itemService: ItemService) {
-    this.itemService.initItemsArrayFromJson();
+    this.itemService.logItems();
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../items-list/item/item.service';
-import { Item } from '../../items-list/item/item.model';
 
 @Component({
   selector: 'app-out-of-stock-items',
@@ -8,8 +7,8 @@ import { Item } from '../../items-list/item/item.model';
   styleUrls: ['./out-of-stock-items.component.css']
 })
 export class OutOfStockItemsComponent implements OnInit {
-  itemsArray: Item[] = this.itemService.itemsArray;
-  itemsOutOfStock: Item[] = [];
+  itemsArray = this.itemService.jsonDataParsed;
+  itemsOutOfStock = [];
 
   checkOutOfStockItems() {
     for (const item of this.itemsArray) {

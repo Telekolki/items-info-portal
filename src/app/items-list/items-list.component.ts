@@ -8,8 +8,13 @@ import { ItemService } from './item/item.service';
 })
 export class ItemsListComponent implements OnInit {
   itemsArray = this.itemService.jsonDataParsed;
+  selectedItem: {};
 
   constructor(private itemService: ItemService) {}
+
+  onClickAction(sku: string) {
+    console.log(sku);
+  }
 
   ngOnInit() {
   }

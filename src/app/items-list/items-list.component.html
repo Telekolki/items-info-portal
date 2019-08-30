@@ -3,14 +3,18 @@
         <div class="col-lg-5">
         <h4>All items list</h4>
         <ul class="list-group">
-          <li class="list-group-item" *ngFor="let item of itemsArray">
+          <a
+          class="list-group-item"
+          *ngFor="let item of itemsArray"
+          (onclick)="onClickAction(item.sku)"
+          >
               <span class="badge">{{item.quantity}}</span>
               {{item.name}}
-          </li>
+          </a>
         </ul>
       </div>
       <div class="col-lg-5">
-          <app-item></app-item>
+        <router-outlet></router-outlet>
       </div>
     </div>
 </div>

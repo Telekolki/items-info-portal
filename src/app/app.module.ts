@@ -13,7 +13,10 @@ import { ItemService } from './items-list/item/item.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'items', component: ItemsListComponent}
+  { path: 'items', component: ItemsListComponent, children: [
+    { path: ':sku', component: ItemComponent}
+    ]
+  }
 ];
 
 @NgModule({

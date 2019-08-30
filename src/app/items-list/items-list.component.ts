@@ -12,10 +12,6 @@ export class ItemsListComponent implements OnInit {
 
   constructor(private itemService: ItemService) {}
 
-  onClickAction(sku: string) {
-    console.log(sku);
-  }
-
   ngOnInit() {
   }
 }

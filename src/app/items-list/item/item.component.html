@@ -1,4 +1,12 @@
-{{item.name}}
-{{item.sku}}
-{{item.quantity}}
-{{item.orders}}
+<ul class="list-group">
+        <h4>{{item.name}}</h4>
+        <li class="list-group-item">SKU: 
+                <span class="badge">{{item.sku}}</span>
+        </li>
+        <li class="list-group-item">Quantity: 
+                <span class="badge">{{item.quantity}}</span>
+        </li>
+        <li class="list-group-item">Orders: 
+                <span class="badge">{{item.orders}}</span>
+        </li>
+      </ul>

@@ -5,8 +5,8 @@
         <ul class="list-group">
           <a
           class="list-group-item"
-          *ngFor="let item of itemsArray"
-          (onclick)="onClickAction(item.sku)"
+          *ngFor="let item of itemsArray, let i = index"
+          routerLink={{item.sku}}
           >
               <span class="badge">{{item.quantity}}</span>
               {{item.name}}

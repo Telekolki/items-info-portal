@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck } from '@angular/core';
 import { ItemService } from './item.service';
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -8,8 +8,8 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./item.component.css']
 })
 
-export class ItemComponent implements OnInit {
-  item;
+export class ItemComponent implements OnInit, DoCheck {
+  item = this.itemService[0];
   sku: string;
 
   constructor(private itemService: ItemService, private route: ActivatedRoute) { }
@@ -22,7 +22,10 @@ export class ItemComponent implements OnInit {
       }
     );
     this.item = this.itemService.getItemBySku(this.sku);
-    console.log(this.item);
+  }
+
+  ngDoCheck() {
+    this.item = this.itemService.getItemBySku(this.sku);
   }
 
 }

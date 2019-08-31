@@ -3,66 +3,66 @@
     "name" : "Лопата",
     "sku" : "Z1",
     "quantity" : 0,
-    "orders" : 1
+    "orders" : 0
   },
   {
     "name" : "Кружок от унитаза",
     "sku" : "Z2",
-    "quantity" : 1,
-    "orders" : 1
+    "quantity" : 0,
+    "orders" : 0
   },
   {
     "name" : "Пенопластовое изделие",
     "sku" : "Z3",
-    "quantity" : 1,
+    "quantity" : 0,
     "orders" : 0
   },
   {
     "name" : "Карандаш",
     "sku" : "Z4",
     "quantity" : 0,
-    "orders" : 100
+    "orders" : 0
   },
   {
     "name" : "Автомобиль класса B",
     "sku" : "Z5",
     "quantity" : 0,
-    "orders" : 1
+    "orders" : 0
   },
   {
     "name" : "Пакет семечек",
     "sku" : "Z6",
-    "quantity" : 10,
-    "orders" : 101
+    "quantity" : 0,
+    "orders" : 0
   },
   {
     "name" : "Шнурки от калош",
     "sku" : "Z8",
     "quantity" : 0,
-    "orders" : 1
+    "orders" : 0
   },
   {
     "name" : "Потерянное время",
     "sku" : "Z9",
-    "quantity" : 99,
+    "quantity" : 0,
     "orders" : 0
   },
   {
     "name" : "Телевизор 'Чайка'",
     "sku" : "Z10",
     "quantity" : 0,
-    "orders" : 1
+    "orders" : 0
   },
   {
     "name" : "Голубь",
     "sku" : "Z11",
-    "quantity" : 2,
-    "orders" : 1
+    "quantity" : 0,
+    "orders" : 0
   },
   {
     "name" : "Баг на проде",
     "sku" : "Z12",
     "quantity" : 0,
-    "orders" : 1
+    "orders" : 0
   }
 ]

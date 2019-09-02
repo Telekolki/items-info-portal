@@ -7,11 +7,11 @@ import { ItemService } from './item/item.service';
   styleUrls: ['./items-list.component.css']
 })
 export class ItemsListComponent implements OnInit {
-  itemsArray = this.itemService.jsonDataParsed;
-  selectedItem: {};
+  itemsArray = [];
 
   constructor(private itemService: ItemService) {}
 
   ngOnInit() {
+    this.itemsArray = this.itemService.jsonDataParsed;
   }
 }

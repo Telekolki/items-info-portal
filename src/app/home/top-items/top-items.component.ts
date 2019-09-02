@@ -7,17 +7,18 @@ import { ItemService } from '../../items-list/item/item.service';
   styleUrls: ['./top-items.component.css']
 })
 export class TopItemsComponent implements OnInit {
-
-  itemsArray = this.itemService.jsonDataParsed;
-  itemsTopRated = this.itemsArray.slice();
+  itemsArray = [];
+  itemsTopRated = [];
 
   sortItems() {
-    this.itemsTopRated.sort(function(a, b){return b.orders - a.orders}).splice(5);
+    this.itemsTopRated.sort((a, b) =>  b.orders - a.orders).splice(5);
   }
 
   constructor(private itemService: ItemService) {}
 
   ngOnInit() {
+    this.itemsArray = this.itemService.jsonDataParsed;
+    this.itemsTopRated = this.itemsArray.slice();
     this.sortItems();
   }
 

@@ -7,7 +7,7 @@ import { ItemService } from '../../items-list/item/item.service';
   styleUrls: ['./out-of-stock-items.component.css']
 })
 export class OutOfStockItemsComponent implements OnInit {
-  itemsArray = this.itemService.jsonDataParsed;
+  itemsArray = [];
   itemsOutOfStock = [];
 
   checkOutOfStockItems() {
@@ -21,6 +21,7 @@ export class OutOfStockItemsComponent implements OnInit {
   constructor(private itemService: ItemService) {}
 
   ngOnInit() {
+    this.itemsArray = this.itemService.jsonDataParsed;
     this.checkOutOfStockItems();
   }
 

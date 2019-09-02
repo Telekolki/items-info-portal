@@ -1,0 +1,9 @@
+.list-group-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.badge {
+  justify-self: flex-end;
+}

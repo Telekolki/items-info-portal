@@ -8,8 +8,8 @@
           *ngFor="let item of itemsArray, let i = index"
           routerLink={{item.sku}}
           >
-              <span class="badge">{{item.quantity}}</span>
-              {{item.name}}
+          <div class="item-name"> {{item.name}} </div>
+          <div class="badge">{{item.quantity}}</div>
           </a>
         </ul>
       </div>

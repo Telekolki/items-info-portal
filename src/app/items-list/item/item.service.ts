@@ -6,11 +6,9 @@ export class ItemService {
   jsonDataParsed: any[] = JSON.parse(this.jsonDataString);
 
   getItemBySku(sku: string) {
-      let i = 0;
-      while (this.jsonDataParsed[i].sku !== sku) {
-        i++;
-      }
-      return this.jsonDataParsed[i];
+      return this.jsonDataParsed.find((element) => {
+        return element.sku === sku;
+      });
   }
 
   logItems() {

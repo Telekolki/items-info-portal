@@ -9,7 +9,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 
 export class ItemComponent implements OnInit, DoCheck {
-  item = this.itemService[0];
+  item ;
   sku: string;
 
   constructor(private itemService: ItemService, private route: ActivatedRoute) { }
